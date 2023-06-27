@@ -27,6 +27,21 @@ void next()
         classes[current] = 1;
     }
 }
+void before()
+{
+    if (current == 0)
+    {
+        current = 2;
+        classes[2] = 1;
+        classes[0] = 0;
+    }
+    else
+    {
+        current--;
+        classes[current] = 1;
+        classes[current + 1] = 0;
+    }
+}
 void printArray()
 {
     for (int i = 0; i < 3; i++)
@@ -38,20 +53,20 @@ void printArray()
 int main()
 {
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
-    next();
+    before();
     printArray();
 }
